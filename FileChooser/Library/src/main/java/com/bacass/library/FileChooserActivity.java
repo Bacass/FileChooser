@@ -97,7 +97,6 @@ public class FileChooserActivity extends AppCompatActivity {
             case REQUEST_CODE_PERMISSION: {
 
                 // Note: If request is cancelled, the result arrays are empty.
-                // Permissions granted (CALL_PHONE).
                 if (grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 
@@ -105,9 +104,7 @@ public class FileChooserActivity extends AppCompatActivity {
                     Toast.makeText(FileChooserActivity.this, "Permission granted!", Toast.LENGTH_SHORT).show();
 
                     this.doSelectFile(isMultiple, mimeType);
-                }
-                // Cancelled or denied.
-                else {
+                } else {
                     Log.i(LOG_TAG, "Permission denied!");
                     Toast.makeText(FileChooserActivity.this, "Permission denied!", Toast.LENGTH_SHORT).show();
                 }
