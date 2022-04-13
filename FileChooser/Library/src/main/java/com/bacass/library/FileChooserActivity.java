@@ -101,12 +101,12 @@ public class FileChooserActivity extends AppCompatActivity {
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 
                     Log.i(LOG_TAG, "Permission granted!");
-                    Toast.makeText(FileChooserActivity.this, "Permission granted!", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(FileChooserActivity.this, "Permission granted!", Toast.LENGTH_SHORT).show();
 
                     this.doSelectFile(isMultiple, mimeType);
                 } else {
                     Log.i(LOG_TAG, "Permission denied!");
-                    Toast.makeText(FileChooserActivity.this, "Permission denied!", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(FileChooserActivity.this, "Permission denied!", Toast.LENGTH_SHORT).show();
                 }
                 break;
             }
