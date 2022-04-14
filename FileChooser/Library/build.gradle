@@ -34,5 +34,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 }
 
-apply plugin: 'com.github.bacass.android-maven'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'android-maven'
 group='com.github.bacass'
