@@ -34,4 +34,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 }
 
+// Github 에 라이브러리 배포를 위해서 아래처럼 group 를 작성해준다.
+// 자신의 user name 이 정확히 들어가야 한다.
 group='com.github.bacass'

@@ -5,6 +5,9 @@ pluginManagement {
         mavenCentral()
     }
 }
+// 안드로이드 스튜디오 Arctic Fox 부터는 app 레벨의 build.gradle 에 작성했던 allprojects 내용을
+// settings.gradle 에 작성해야 한다.
+// Github 에 라이브러리 배포를 위해 maven { url "https://jitpack.io" } 를 추가했다.
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
