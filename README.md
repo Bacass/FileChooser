@@ -33,7 +33,7 @@ Simple Android File Chooser
    ```
 
 # How to use
-*  There are many different mime types (&#42;/&#42;, , video/&#42;, audio/&#42;, application/pdf, application/zip ...)
+*  There are many different mime types ( &#42;/&#42;, video/&#42;, audio/&#42;, application/pdf, application/zip ... )
 
 	```java
 	 new FileChooser(this)
