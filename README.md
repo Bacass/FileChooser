@@ -61,6 +61,50 @@ Simple Android File Chooser
             .start(RESULT_CODE_FILESELECT);
     ```
 
+*  Return
+    ```java
+    private final int RESULT_CODE_FILESELECT = 15981;
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        switch (requestCode) {
+            case RESULT_CODE_FILESELECT:
+                if (resultCode == Activity.RESULT_OK) {
+                    if (data != null) {
+                        if (data.getClipData() != null){
+                            String filePath = "";
+                            for (int index = 0; index < data.getClipData().getItemCount(); index++) {
+
+                                Uri fileUri = data.getClipData().getItemAt(index).getUri();
+                                try {
+                                    filePath += FileUtils.getPath(SampleActivity.this, fileUri);
+                                    filePath += "\n";
+                                } catch (Exception e) {
+                                    Log.e(LOG_TAG, "error: " + e);
+                                }
+                            }
+                            Log.d(LOG_TAG, filePath);
+
+                        } else {
+                            Uri fileUri = data.getData();
+                            Log.i(LOG_TAG, "Uri: " + fileUri);
+
+                            String filePath = null;
+                            try {
+                                filePath = FileUtils.getPath(SampleActivity.this, fileUri);
+                            } catch (Exception e) {
+                                Log.e(LOG_TAG, "error: " + e);
+                            }
+                            Log.d(LOG_TAG, filePath);
+                        }
+                    }
+                }
+                break;
+        }
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+    ```
+
 # Libraries Used
 * [From this link](https://o7planning.org/12725/create-a-simple-file-chooser-in-android#a61685561)
 
