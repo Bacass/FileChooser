@@ -20,7 +20,7 @@ Simple Android File Chooser
     ```
 
    ** If you are using a AndroidStudio higher than version Arktic Fox, please set it in the [settings.gradle] file.
-   
+
    ```groovy
    dependencyResolutionManagement {
         repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
@@ -32,9 +32,8 @@ Simple Android File Chooser
    }
    ```
 
-# Customization
-*  Pick files..
-*  There are many different mime types (*/*, , video/*, audio/*, application/pdf, application/zip ...)
+# How to use
+*  There are many different mime types (&#42;/&#42;, , video/&#42;, audio/&#42;, application/pdf, application/zip ...)
 
 	```java
 	 new FileChooser(this)
@@ -44,7 +43,7 @@ Simple Android File Chooser
     ```java
 	 new FileChooser(this)
             .setMimeType("*/*")
-            .setMultipleChoose(true)
+            .setMultipleChoose(false) // Select one file..
             .start(RESULT_CODE_FILESELECT);
     ```
 
@@ -67,7 +66,7 @@ Simple Android File Chooser
 
 ## License
 
-    Copyright, bacass
+    Copyright, Bacass
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
