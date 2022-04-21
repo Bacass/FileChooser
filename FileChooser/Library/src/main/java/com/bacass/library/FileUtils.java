@@ -340,6 +340,48 @@ public class FileUtils {
         return extension;
     }
 
+    /**
+     * Get File Extension
+     * @param filePath
+     * @return
+     */
+    public static String getFileExtension(String filePath) {
+        return filePath.substring(filePath.lastIndexOf("."));
+    }
+
+    /**
+     * Get File Name
+     * @param filePath
+     * @return
+     */
+    public static String getFileName(String filePath) {
+        return filePath.substring(filePath.lastIndexOf("/") + 1);
+    }
+
+    /**
+     * Get File Name without Extension
+     * @param filePath
+     * @return
+     */
+    public static String getFileNameWithoutExtension(String filePath) {
+        String fileName = getFileName(filePath);
+        return fileName.substring(0, fileName.lastIndexOf("."));
+    }
+
+    /**
+     * Get File Path
+     * @param filePath
+     * @return
+     */
+    public static String getFilePath(String filePath) {
+        return filePath.substring(0, filePath.lastIndexOf("/") + 1);
+    }
+
+    /**
+     * Get File Uri
+     * @param path
+     * @return
+     */
     public static Uri getFileUri(String path) {
         Uri uri = null;
         try {
@@ -349,7 +391,6 @@ public class FileUtils {
 
         return uri;
     }
-
 
     /**
      * @param uri - The Uri to check.
